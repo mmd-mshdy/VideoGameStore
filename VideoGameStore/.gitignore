@@ -1,0 +1,14 @@
+# Build folders
+bin/
+obj/
+.vs/
+node_modules/
+
+# User-specific files
+*.user
+*.suo
+*.db
+*.dll
+*.pdb
+*.log
+*.cache
