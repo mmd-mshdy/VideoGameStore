@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VideoGameStore.Dtos;
-namespace VideoGameStore.Data
+using VideoGameStore.Domain.Entities;
+
+namespace VideoGameStore.Infrastructure.Data
 {
     public class VideoGamesContext : DbContext
     {
         public VideoGamesContext(DbContextOptions<VideoGamesContext> options) : base(options) { }
-        public DbSet<GameDto>? GameDtos { get; set; } = null;
+        public DbSet<Game>? Games { get; set; } = null;
     }
 }

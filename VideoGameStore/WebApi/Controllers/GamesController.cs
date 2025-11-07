@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using VideoGameStore.Data;
-using VideoGameStore.Dtos;
+using VideoGameStore.Application.Dtos;
+using VideoGameStore.Infrastructure.Data;
 
-namespace VideoGameStore.Controllers
+namespace VideoGameStore.WebApi.Controllers
 {
     public class GamesController : Controller
     {
