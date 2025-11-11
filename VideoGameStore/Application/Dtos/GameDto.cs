@@ -1,6 +1,7 @@
 ﻿namespace VideoGameStore.Application.Dtos
 {
-    public record class GameDto(
+    public record GameDto(
+        int Id,
         string Name,
         string Genre,
         decimal Price,

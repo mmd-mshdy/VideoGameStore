@@ -1,12 +1,13 @@
-﻿using VideoGameStore.Domain.Entities;
+﻿using VideoGameStore.Application.Dtos;
+using VideoGameStore.Domain.Entities;
 namespace VideoGameStore.Application.Interfaces
 {
     public interface IGameService
     {
-        Task<IEnumerable<Game>> GetAllAsync();
-        Task<Game> GetByIdAsync(int id);
-        Task AddAsync(Game game);
-        Task UpdateAsync(Game game);
-        Task DeleteAsync(int id);
+        Task<IEnumerable<GameDto>> GetAllAsync();
+        Task<GameDto> GetByIdAsync(int Id);
+        Task AddAsync(CreateGameDto dto);
+        Task UpdateAsync(int Id ,UpdateGameDto dto);
+        Task DeleteAsync(int Id);
     }
 }

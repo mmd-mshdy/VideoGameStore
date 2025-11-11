@@ -1,57 +1,79 @@
 ﻿using VideoGameStore.Domain.Entities;
 using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Application.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 namespace VideoGameStore.Application.Services
 {
     public class GameService : IGameService
     {
-        private readonly IGameRepository _repository;
-        public GameService(IGameRepository repository)
+        private readonly IUnitOfWork _unitOfWork;
+        public GameService(IUnitOfWork unitOfWork)
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
-        public async Task AddAsync(Game game)
+        public async Task AddAsync(CreateGameDto dto)
         {
-            var existing = await _repository.GetByIdAsync(game.Id);
-            if (existing != null)
+            var game = new Game
             {
-               throw new InvalidOperationException("game already exists");
-            }
-            await _repository.AddAsync(game);
-        
+                Name = dto.Name,
+                Price = dto.Price,
+                Genre = dto.Genre,
+                ReleaseDate = dto.ReleaseDate,
+            };
+            await _unitOfWork.Games.AddAsync(game);
+            await _unitOfWork.CompleteAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task UpdateAsync(int Id,UpdateGameDto dto)
         {
-            var existing = await _repository.GetByIdAsync(id);
-            if (existing != null)
-            {
-                await _repository.DeleteAsync(id);
-            }
-            throw new InvalidOperationException("Game not Found");
-           
+
+            var game = await _unitOfWork.Games.GetByIdAsync(Id);
+            if (game == null) return;
+
+            game.Name = dto.Name;
+            game.Genre = dto.Genre;
+            game.Price = dto.Price;
+            game.ReleaseDate = dto.ReleaseDate;
+
+            await _unitOfWork.Games.UpdateAsync(game);
+            await _unitOfWork.CompleteAsync();
         }
 
-        public async Task<IEnumerable<Game>> GetAllAsync()
+
+
+        public async Task<GameDto?> GetByIdAsync(int Id)
         {
-          return  await _repository.GetAllAsync();
+            var game = await _unitOfWork.Games.GetByIdAsync(Id);
+            if (game == null) return null;
+
+            return new GameDto
+            (
+                game.Id,
+                game.Name,
+                game.Genre,
+                game.Price,
+                game.ReleaseDate
+            );
+        }
+        public async Task<IEnumerable<GameDto>> GetAllAsync()
+        {
+            var games = await _unitOfWork.Games.GetAllAsync();
+            return games.Select(g => new GameDto(
+                g.Id,
+                g.Name,       
+                g.Genre,
+                g.Price,
+                g.ReleaseDate
+            ));
         }
 
-        public async Task<Game> GetByIdAsync(int id)
+        public async Task DeleteAsync(int Id)
         {
-            var existing = await _repository.GetByIdAsync(id);
-            if (existing != null)
-            {
-               return await _repository.GetByIdAsync(id);
-            }
-            throw new InvalidOperationException("Game not found");
-        }
-
-        public async Task<IEnumerable<Game>> GetGameAsync() => await _repository.GetAllAsync();
-
-        public async Task UpdateAsync(Game game)
-        {
-            await _repository.UpdateAsync(game);
+            await _unitOfWork.Games.DeleteAsync(Id);
+            await _unitOfWork.CompleteAsync();
         }
     }
 }
