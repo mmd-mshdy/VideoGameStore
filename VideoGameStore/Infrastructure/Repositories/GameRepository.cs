@@ -5,31 +5,35 @@ using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
 namespace VideoGameStore.Infrastructure.Repositories
 {
-    public class GameRepositories: IGameRepository
+    public class GameRepository : IGameRepository
     {
         private readonly VideoGamesContext _context;
-        public GameRepositories(VideoGamesContext context)
+        public GameRepository(VideoGamesContext context)
         {
             _context = context;
         }
         public async Task<IEnumerable<Game>> GetAllAsync() => await _context.Games.ToListAsync();
-        public async Task<Game> FindByIdAsync(int id) => await _context.Games.FindAsync(id);
-        public async Task Add(Game game)
+        public async Task<Game> GetByIdAsync(int id) => await _context.Games.FindAsync(id);
+        public async Task AddAsync(Game game)
         {
             _context.Games.Add(game);
             await _context.SaveChangesAsync();
 
         }
-        public async Task Update(Game game)
+        public async Task UpdateAsync(Game game)
         {
             _context.Games.Update(game);
             await _context.SaveChangesAsync();
 
         }
-        public async Task Delete (Game game)
+        public async  Task DeleteAsync (int id)
         {
-            _context.Games.Remove(game);
-            await _context.SaveChangesAsync();
+            var game = await _context.Games.FindAsync(id);
+            if (game != null) 
+            {
+                _context.Games.Remove(game);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }
