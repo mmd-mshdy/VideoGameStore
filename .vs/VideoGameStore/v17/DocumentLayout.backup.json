@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\enums\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\enums\\transactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\iaggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\iaggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\dtos\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,19 +50,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Services\\GameService.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Services\\GameService.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Services\\GameService.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Services\\GameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "TransactionType.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Enums\\TransactionType.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Enums\\TransactionType.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Enums\\TransactionType.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Enums\\TransactionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T05:29:47.454Z",
+              "WhenOpened": "2025-11-12T06:53:49.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IAggregateRoot.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\IAggregateRoot.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\IAggregateRoot.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\IAggregateRoot.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\IAggregateRoot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:43:15.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\BaseEntity.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:39:28.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Transaction.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Transaction.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Transaction.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Transaction.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:26:48.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:02:33.672Z",
               "EditorCaption": ""
             },
             {
@@ -51,37 +123,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IGameService.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Interfaces\\IGameService.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IGameService.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Interfaces\\IGameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Rental.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Rental.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Rental.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Rental.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T05:25:22.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\appsettings.json",
-              "RelativeDocumentMoniker": "VideoGameStore\\appsettings.json",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\appsettings.json",
-              "RelativeToolTip": "VideoGameStore\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-11T04:35:10.202Z",
+              "WhenOpened": "2025-11-12T06:01:58.855Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAACoAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T05:55:45.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Manager.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Manager.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Manager.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Manager.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Manager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T06:00:25.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameDto.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Dtos\\GameDto.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Dtos\\GameDto.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Dtos\\GameDto.cs",
+              "RelativeToolTip": "VideoGameStore\\Application\\Dtos\\GameDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T15:47:23.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\WebApi\\Program.cs",
@@ -89,20 +183,7 @@
               "RelativeToolTip": "VideoGameStore\\WebApi\\Program.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T15:51:25.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameDto.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Dtos\\GameDto.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Dtos\\GameDto.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Dtos\\GameDto.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Dtos\\GameDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T15:47:23.962Z"
+              "WhenOpened": "2025-11-07T15:51:25.444Z"
             }
           ]
         }
