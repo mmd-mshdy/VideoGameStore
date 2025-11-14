@@ -21,4 +21,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Application\Customers\Query\" />
+    <Folder Include="Application\Games\Query\" />
+  </ItemGroup>
+
 </Project>

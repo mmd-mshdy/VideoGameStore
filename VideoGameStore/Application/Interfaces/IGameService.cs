@@ -1,4 +1,5 @@
-﻿using VideoGameStore.Application.Dtos;
+﻿using VideoGameStore.Application.Games.Command.Create;
+using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Domain.Entities;
 namespace VideoGameStore.Application.Interfaces
 {
@@ -6,8 +7,8 @@ namespace VideoGameStore.Application.Interfaces
     {
         Task<IEnumerable<GameDto>> GetAllAsync();
         Task<GameDto> GetByIdAsync(int Id);
-        Task AddAsync(CreateGameDto dto);
-        Task UpdateAsync(int Id ,UpdateGameDto dto);
+        Task AddAsync(CreateGameCommand dto);
+        Task UpdateAsync(int Id ,UpdateGameCommand dto);
         Task DeleteAsync(int Id);
     }
 }

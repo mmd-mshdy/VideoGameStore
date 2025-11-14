@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VideoGameStore.Application.Dtos;
+using VideoGameStore.Application.Games.Command.Create;
+using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Interfaces;
 
 namespace VideoGameStore.WebUI.Controllers;
@@ -22,7 +23,7 @@ public class GamesController : Controller
     public IActionResult Create() => View();
 
     [HttpPost]
-    public async Task<IActionResult> Create(CreateGameDto dto)
+    public async Task<IActionResult> Create(CreateGameCommand dto)
     {
         if (!ModelState.IsValid)
             return View(dto);
@@ -47,7 +48,7 @@ public class GamesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, UpdateGameDto dto)
+    public async Task<IActionResult> Edit(int id, UpdateGameCommand dto)
     {
         await _service.UpdateAsync(id, dto);
         return RedirectToAction(nameof(Index));

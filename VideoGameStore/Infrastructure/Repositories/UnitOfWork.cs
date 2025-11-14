@@ -1,5 +1,5 @@
 ﻿using NuGet.Protocol.Core.Types;
-using VideoGameStore.Application.Dtos;
+using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
@@ -19,7 +19,7 @@ namespace VideoGameStore.Infrastructure.Repositories
         {
             await _context.SaveChangesAsync();
         }
-        public async Task AddGames(UpdateGameDto dto)
+        public async Task AddGames(UpdateGameCommand dto)
         {
             var game = new Game(dto.Name , dto.Genre ,dto.Price ,dto.ReleaseDate);
             if (game!=null)

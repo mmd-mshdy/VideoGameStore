@@ -5,7 +5,7 @@ using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
 namespace VideoGameStore.Infrastructure.Repositories
 {
-    public class GameRepository : IGameRepository
+    public class GameRepository : IGenericRepository<Game>
     {
         private readonly VideoGamesContext _context;
         public GameRepository(VideoGamesContext context)
@@ -16,14 +16,12 @@ namespace VideoGameStore.Infrastructure.Repositories
         public async Task<Game> GetByIdAsync(int id) => await _context.Games.FindAsync(id);
         public async Task AddAsync(Game game)
         {
-            _context.Games.Add(game);
-            await _context.SaveChangesAsync();
+            await _context.Games.AddAsync(game);
 
         }
         public async Task UpdateAsync(Game game)
         {
-            _context.Games.Update(game);
-            await _context.SaveChangesAsync();
+              _context.Games.Update(game);
 
         }
         public async  Task DeleteAsync (int id)
@@ -32,7 +30,6 @@ namespace VideoGameStore.Infrastructure.Repositories
             if (game != null) 
             {
                 _context.Games.Remove(game);
-                await _context.SaveChangesAsync();
             }
         }
     }
