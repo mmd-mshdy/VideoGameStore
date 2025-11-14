@@ -1,26 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using VideoGameStore.Application.Games.Command.Create;
+using VideoGameStore.Application.Games.Command.Delete;
 using VideoGameStore.Application.Games.Command.Update;
-using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Application.Games.Query.Get;
 
 namespace VideoGameStore.WebUI.Controllers;
 
 public class GamesController : Controller
 {
-    private readonly IGameService _service;
+    private readonly ISender _sender;
 
-    public GamesController(IGameService service)
+    public GamesController(ISender sender)
     {
-        _service = service;
+        _sender = sender;
     }
 
-    public async Task<IActionResult> Index()
-    {
-        var games = await _service.GetAllAsync();
-        return View(games);
-    }
-
-    public IActionResult Create() => View();
 
     [HttpPost]
     public async Task<IActionResult> Create(CreateGameCommand dto)
@@ -28,17 +24,17 @@ public class GamesController : Controller
         if (!ModelState.IsValid)
             return View(dto);
 
-        await _service.AddAsync(dto);
+        await _sender.Send(dto);
         return RedirectToAction(nameof(Index));
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(GetGameQuery query)
     {
-        var game = await _service.GetByIdAsync(id);
+        var game = await _sender.Send(query);
         if (game == null) return NotFound();
 
-        return View(new UpdateGameDto
+        return View(new GameDto
         (
              game.Name,
             game.Genre,
@@ -47,17 +43,17 @@ public class GamesController : Controller
         ));
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Edit(int id, UpdateGameCommand dto)
+    [HttpPut]
+    public async Task<IActionResult> Edit( UpdateGameCommand dto)
     {
-        await _service.UpdateAsync(id, dto);
+        await _sender.Send(dto);
         return RedirectToAction(nameof(Index));
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Delete(int id)
+    [HttpDelete]
+    public async Task<IActionResult> Delete(DeleteGameCommand command)
     {
-        await _service.DeleteAsync(id);
+        await _sender.Send(command);
         return RedirectToAction(nameof(Index));
     }
 }

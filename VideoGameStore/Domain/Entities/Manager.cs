@@ -6,7 +6,6 @@ namespace VideoGameStore.Domain.Entities
     {
         public string FullName { get; private set; }
         public string Email { get; private set; }
-
         private Manager() { }
 
         public Manager(string fullName, string email)

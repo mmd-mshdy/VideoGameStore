@@ -1,11 +1,43 @@
 using Microsoft.EntityFrameworkCore;
-using VideoGameStore.Infrastructure.Data;
-using VideoGameStore.Application.Interfaces;
-using VideoGameStore.Infrastructure.Repositories;
 using Microsoft.OpenApi.Models;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using Serilog;
+using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.Entities;
+using VideoGameStore.Infrastructure.Data;
+using VideoGameStore.Infrastructure.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//builder.Logging.AddOpenTelemetry(logging =>
+//{
+//    logging.IncludeFormattedMessage = true;
+//    logging.IncludeScopes = true;
+//});
+
+
+//builder.Services.AddOpenTelemetry()
+//    .ConfigureResource(r => r.AddService("VideoGameStore"))
+//    .WithMetrics(metrics =>
+//    {
+//        metrics
+//            .AddHttpClientInstrumentation();
+//    })
+//    .WithTracing(tracing =>
+//    {
+//        tracing
+//            .AddHttpClientInstrumentation()
+//            .AddEntityFrameworkCoreInstrumentation();
+//    });
+
+var serilog = new LoggerConfiguration()
+    .WriteTo.Console()
+    .ReadFrom.Configuration(builder.Configuration).CreateLogger();
+
+builder.Services.AddSerilog(serilog);
 
 builder.Services.AddDbContext<VideoGamesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddControllersWithViews();
@@ -19,7 +51,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-builder.Services.AddScoped<IGameRepository, GameRepository>();
+builder.Services.AddScoped<IGenericRepository<Game>, GameRepository>();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
