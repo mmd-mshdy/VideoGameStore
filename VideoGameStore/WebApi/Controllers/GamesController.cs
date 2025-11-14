@@ -32,7 +32,7 @@ public class GamesController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> Edit(int id)
+    public async Task<IActionResult> GetById(int id)
     {
         var game = await _service.GetByIdAsync(id);
         if (game == null) return NotFound();

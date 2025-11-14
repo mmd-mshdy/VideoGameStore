@@ -1,5 +1,7 @@
 ﻿using NuGet.Protocol.Core.Types;
+using VideoGameStore.Application.Dtos;
 using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
 
 namespace VideoGameStore.Infrastructure.Repositories
@@ -13,9 +15,16 @@ namespace VideoGameStore.Infrastructure.Repositories
             _context = context;
             Games = repository;
         }
-        public async Task<int> CompleteAsync()
+        public async Task CompleteAsync()
         {
-           return await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
+        }
+        public async Task AddGames(UpdateGameDto dto)
+        {
+            var game = new Game(dto.Name , dto.Genre ,dto.Price ,dto.ReleaseDate);
+            if (game!=null)
+            await _context.AddAsync(game);
+            throw new InvalidDataException("Invalid");
         }
         public void Dispose()
         {

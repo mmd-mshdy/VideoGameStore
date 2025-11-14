@@ -1,15 +1,13 @@
 ﻿using VideoGameStore.Domain.Entities;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Application.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 namespace VideoGameStore.Application.Services
 {
     public class GameService : IGameService
     {
+        private readonly IGameRepository _gameRepository;
         private readonly IUnitOfWork _unitOfWork;
-        public GameService(IUnitOfWork unitOfWork)
+        public GameService(IUnitOfWork unitOfWork , IGameRepository gameRepository)
         {
             _unitOfWork = unitOfWork;
         }
@@ -17,28 +15,23 @@ namespace VideoGameStore.Application.Services
         public async Task AddAsync(CreateGameDto dto)
         {
             var game = new Game
-            {
-                Name = dto.Name,
-                Price = dto.Price,
-                Genre = dto.Genre,
-                ReleaseDate = dto.ReleaseDate,
-            };
-            await _unitOfWork.Games.AddAsync(game);
+            (
+                dto.Name,
+                 dto.Genre,
+                dto.Price,
+
+                 dto.ReleaseDate
+            );
+            await _gameRepository.AddAsync(game);
             await _unitOfWork.CompleteAsync();
         }
 
         public async Task UpdateAsync(int Id,UpdateGameDto dto)
         {
 
-            var game = await _unitOfWork.Games.GetByIdAsync(Id);
+            var game = await _gameRepository.GetByIdAsync(Id);
             if (game == null) return;
-
-            game.Name = dto.Name;
-            game.Genre = dto.Genre;
-            game.Price = dto.Price;
-            game.ReleaseDate = dto.ReleaseDate;
-
-            await _unitOfWork.Games.UpdateAsync(game);
+            await _gameRepository.UpdateAsync(game);
             await _unitOfWork.CompleteAsync();
         }
 
@@ -46,7 +39,7 @@ namespace VideoGameStore.Application.Services
 
         public async Task<GameDto?> GetByIdAsync(int Id)
         {
-            var game = await _unitOfWork.Games.GetByIdAsync(Id);
+            var game = await _gameRepository.GetByIdAsync(Id);
             if (game == null) return null;
 
             return new GameDto
@@ -60,7 +53,7 @@ namespace VideoGameStore.Application.Services
         }
         public async Task<IEnumerable<GameDto>> GetAllAsync()
         {
-            var games = await _unitOfWork.Games.GetAllAsync();
+            var games = await _gameRepository.GetAllAsync();
             return games.Select(g => new GameDto(
                 g.Id,
                 g.Name,       
@@ -72,7 +65,7 @@ namespace VideoGameStore.Application.Services
 
         public async Task DeleteAsync(int Id)
         {
-            await _unitOfWork.Games.DeleteAsync(Id);
+            await _gameRepository.DeleteAsync(Id);
             await _unitOfWork.CompleteAsync();
         }
     }

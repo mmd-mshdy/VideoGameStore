@@ -2,7 +2,6 @@
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGameRepository Games {get;}
-        Task<int> CompleteAsync();
+        Task CompleteAsync();
     }
 }
