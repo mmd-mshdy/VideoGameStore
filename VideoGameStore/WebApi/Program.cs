@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -32,7 +34,20 @@ var builder = WebApplication.CreateBuilder(args);
 //            .AddHttpClientInstrumentation()
 //            .AddEntityFrameworkCoreInstrumentation();
 //    });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(o =>
+    {
+        o.RequireHttpsMetadata = false;
+        o.TokenValidationParameters = new TokenValidationParameters
+        {
+            IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(builder.Configuration["JwtApi:Secret"]!)),
+            ValidIssuer = builder.Configuration["JwtApi:Issuer"],
+            ValidAudience = builder.Configuration["JwtApi:Audience"],
+            ClockSkew = TimeSpan.Zero
+        };
 
+    });
+builder.Services.AddAuthorization();
 var serilog = new LoggerConfiguration()
     .WriteTo.Console()
     .ReadFrom.Configuration(builder.Configuration).CreateLogger();
@@ -65,7 +80,7 @@ if (app.Environment.IsDevelopment())
 app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
-
+app.UseAuthentication();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Games}/{action=Index}/{id?}");

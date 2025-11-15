@@ -1,5 +1,6 @@
 ﻿using Humanizer;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VideoGameStore.Application.Games.Command.Create;
 using VideoGameStore.Application.Games.Command.Delete;
@@ -7,7 +8,7 @@ using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Games.Query.Get;
 
 namespace VideoGameStore.WebUI.Controllers;
-
+[Authorize]
 public class GamesController : Controller
 {
     private readonly ISender _sender;
