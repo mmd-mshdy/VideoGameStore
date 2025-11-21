@@ -9,6 +9,5 @@ namespace VideoGameStore.Application.Interfaces
         Task AddAsync (T t);
         Task UpdateAsync(T t);
         Task DeleteAsync(int id);
-        
     }
 }

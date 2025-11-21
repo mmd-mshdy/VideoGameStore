@@ -4,7 +4,7 @@ using VideoGameStore.Domain.Entities;
 
 namespace VideoGameStore.Application.Games.Command.Update
 {
-    public class UpdateGameCommandHandler : IRequestHandler<UpdateGameCommand, int>
+    public class UpdateGameCommandHandler : ICommandHandler<UpdateGameCommand, int>
     {
         private readonly IGenericRepository<Game> _gameRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -15,7 +15,12 @@ namespace VideoGameStore.Application.Games.Command.Update
         }
         public async Task<int> Handle(UpdateGameCommand request, CancellationToken cancellationToken)
         {
-            var game = new Game(request.GameDto.Name, request.GameDto.Genre, request.GameDto.Price, request.GameDto.ReleaseDate);
+            var game = await _gameRepository.GetByIdAsync(request.id);
+            if (game == null)
+            {
+                return 0;
+            }
+            game.Update(request.Name, request.Genre, request.Price, request.ReleaseDate);
             await _gameRepository.UpdateAsync(game);
             await _unitOfWork.CompleteAsync();
             return game.Id;

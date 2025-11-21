@@ -1,11 +1,9 @@
-﻿using MediatR;
-using NuGet.Protocol.Plugins;
-using VideoGameStore.Application.Interfaces;
+﻿using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
 
 namespace VideoGameStore.Application.Games.Command.Delete;
 
-public class DeleteGameCommandHandler : IRequestHandler<DeleteGameCommand, string>
+public class DeleteGameCommandHandler : ICommandHandler<DeleteGameCommand, string>
 {
     private readonly IGenericRepository<Game> _gameRepository;
     private readonly IUnitOfWork _unitOfWork;

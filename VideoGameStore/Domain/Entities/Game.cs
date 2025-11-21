@@ -17,6 +17,14 @@ namespace VideoGameStore.Domain.Entities
             Price = price;
             ReleaseDate = releaseDate;
         }
+        public void Update(string name, string genre, decimal price, DateTime releaseDate)
+        {
+            Name = name;
+            Genre = genre;
+            Price = price;
+            ReleaseDate = releaseDate;
+        }
+
         public void UpdatePrice(decimal newprice)
         {
             if (newprice <= 0)

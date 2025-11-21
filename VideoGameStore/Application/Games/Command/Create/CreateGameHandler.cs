@@ -1,11 +1,10 @@
 ﻿using MediatR;
-using NuGet.Protocol.Plugins;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
 
 namespace VideoGameStore.Application.Games.Command.Create
 {
-    public class CreateGameHandler : IRequestHandler<CreateGameCommand , int>
+    public class CreateGameHandler : ICommandHandler<CreateGameCommand , int>
     {
         private readonly IGenericRepository<Game> _gameRepository;
         private readonly IUnitOfWork _unitOfWork;

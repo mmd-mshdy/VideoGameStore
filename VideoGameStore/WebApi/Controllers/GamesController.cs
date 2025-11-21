@@ -8,7 +8,8 @@ using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Games.Query.Get;
 
 namespace VideoGameStore.WebUI.Controllers;
-[Authorize]
+[ApiController]
+[Route("api/[controller]")]
 public class GamesController : Controller
 {
     private readonly ISender _sender;
@@ -20,41 +21,34 @@ public class GamesController : Controller
 
 
     [HttpPost]
-    public async Task<IActionResult> Create(CreateGameCommand dto)
+    public async Task<IActionResult> Create([FromBody] CreateGameCommand dto)
     {
         if (!ModelState.IsValid)
             return View(dto);
 
-        await _sender.Send(dto);
-        return RedirectToAction(nameof(Index));
+        var id = await _sender.Send(dto);
+        return Ok(new { GameId = id });
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetById(GetGameQuery query)
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
     {
-        var game = await _sender.Send(query);
-        if (game == null) return NotFound();
-
-        return View(new GameDto
-        (
-             game.Name,
-            game.Genre,
-            game.Price,
-            DateTime.Now
-        ));
+        var game = await _sender.Send(new GetGameQuery(id));
+        return game == null ? NotFound() : Ok(game);
     }
 
-    [HttpPut]
-    public async Task<IActionResult> Edit( UpdateGameCommand dto)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Edit( [FromBody] UpdateGameCommand dto)
     {
         await _sender.Send(dto);
-        return RedirectToAction(nameof(Index));
+        return NoContent();
+
     }
 
-    [HttpDelete]
-    public async Task<IActionResult> Delete(DeleteGameCommand command)
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
     {
-        await _sender.Send(command);
-        return RedirectToAction(nameof(Index));
+        await _sender.Send(new DeleteGameCommand(id));
+        return NoContent();
     }
 }
