@@ -18,11 +18,12 @@ namespace VideoGameStore.Application.Customers.Command.Update
             var customer = await _repository.GetByIdAsync(request.Id);
             if (customer != null)
             {
+                customer.Update(request.Name, request.Email);
                 await _repository.UpdateAsync(customer);
                 await _unitOfWork.CompleteAsync();
                 return customer.Id;
             }
-            return 0;
+            return request.Id;
         }
     }
 }

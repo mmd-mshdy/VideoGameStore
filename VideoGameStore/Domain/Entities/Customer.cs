@@ -7,7 +7,7 @@ namespace VideoGameStore.Domain.Entities
     {
         public string? Name { get; private set; } = null;
         public string? Email { get; private set; } = null;
-        public decimal WalletBalance { get; private set; }
+        public decimal WalletBalance { get; private set; } = 0;
         public ICollection<Transaction> Transactions { get; private set; } = new List<Transaction>();
         private Customer() { }
         public Customer(string name , string email , decimal walletbalance=0) 
@@ -21,6 +21,12 @@ namespace VideoGameStore.Domain.Entities
             if (amount <= 0)
                 throw new InvalidOperationException("Amount should be positive");
             WalletBalance += amount;
+        }
+        public void Update(string name , string email , decimal walletBallance=0)
+        {
+            name = Name;
+            email = Email;
+            walletBallance = WalletBalance;
         }
         public void DeductBalance(decimal amount)
         {

@@ -7,7 +7,8 @@ using VideoGameStore.Infrastructure.Data;
 using VideoGameStore.Infrastructure.Repositories;
 using VideoGameStore.Domain.Entities;
 using VideoGameStore.Application.Interfaces;
-using VideoGameStore.Application.Games.Command.Create; // <-- needed to locate assembly
+using VideoGameStore.Application.Games.Command.Create;
+using System.Reflection.Metadata; // <-- needed to locate assembly
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,7 +39,7 @@ builder.Services.AddDbContext<VideoGamesContext>(options =>
 builder.Services.AddMediatR(cfg =>
 {
     // Register MediatR from Application layer
-    cfg.RegisterServicesFromAssembly(typeof(CreateGameCommand).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly);
 });
 
 // Controllers (API)

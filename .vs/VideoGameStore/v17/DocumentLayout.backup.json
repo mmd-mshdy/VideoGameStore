@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\webapi\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\webapi\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\games\\command\\update\\updategamecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\games\\command\\update\\updategamecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\customers\\command\\update\\updatecustomercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\customers\\command\\update\\updatecustomercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\infrastructure\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\infrastructure\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\games\\command\\update\\updategamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +29,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\games\\command\\create\\creategamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\games\\command\\create\\creategamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\webapi\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\webapi\\controllers\\gamescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\infrastructure\\data\\videogamescontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\interfaces\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\interfaces\\icommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\interfaces\\iqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,37 +74,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateGameCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA2wBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T15:40:12.955Z",
+              "WhenOpened": "2025-11-21T16:51:04.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateGameCommand.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Infrastructure\\Repositories\\GameRepository.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Infrastructure\\Repositories\\GameRepository.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Infrastructure\\Repositories\\GameRepository.cs",
+              "RelativeToolTip": "VideoGameStore\\Infrastructure\\Repositories\\GameRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T15:39:55.967Z",
+              "WhenOpened": "2025-11-21T16:37:22.231Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateCustomerCommand.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Customers\\Command\\Update\\UpdateCustomerCommand.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Customers\\Command\\Update\\UpdateCustomerCommand.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Customers\\Command\\Update\\UpdateCustomerCommand.cs",
+              "RelativeToolTip": "VideoGameStore\\Application\\Customers\\Command\\Update\\UpdateCustomerCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T16:00:37.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -100,7 +125,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "UpdateGameCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
+              "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommandHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T15:40:12.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateGameCommand.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
+              "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Update\\UpdateGameCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T15:39:55.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "VideoGamesContext.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Infrastructure\\Data\\VideoGamesContext.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Infrastructure\\Data\\VideoGamesContext.cs",
@@ -113,20 +164,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Interfaces\\IGenericRepository.cs",
               "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IGenericRepository.cs",
               "RelativeToolTip": "VideoGameStore\\Application\\Interfaces\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T14:03:27.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ICommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\ICommandHandler.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Interfaces\\ICommandHandler.cs",
@@ -139,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "GetCustomerByIdQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Customers\\Query\\GetCustomerByIdQueryHandler.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Customers\\Query\\GetCustomerByIdQueryHandler.cs",
@@ -152,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "GetCustomerByIdQuery.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Customers\\Query\\GetCustomerByIdQuery.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Customers\\Query\\GetCustomerByIdQuery.cs",
@@ -165,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "IQueryHandler.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IQueryHandler.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Interfaces\\IQueryHandler.cs",
@@ -178,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IQuery.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Interfaces\\IQuery.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Interfaces\\IQuery.cs",
@@ -190,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "DeleteGameCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Delete\\DeleteGameCommandHandler.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Delete\\DeleteGameCommandHandler.cs",
@@ -202,20 +253,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CreateGameHandler.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Create\\CreateGameHandler.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\Application\\Games\\Command\\Create\\CreateGameHandler.cs",
               "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Games\\Command\\Create\\CreateGameHandler.cs",
               "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Create\\CreateGameHandler.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T06:47:01.373Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "GamesController.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\WebApi\\Controllers\\GamesController.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\WebApi\\Controllers\\GamesController.cs",
@@ -228,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "VideoGameStore\\WebApi\\Program.cs",
