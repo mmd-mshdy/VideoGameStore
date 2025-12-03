@@ -21,7 +21,7 @@ namespace VideoGameStore.Infrastructure.Repositories
         }
         public async Task AddGames(UpdateGameCommand dto)
         {
-            var game = new Game(dto.GameDto.Name , dto.GameDto.Genre , dto.GameDto.Price , dto.GameDto.ReleaseDate);
+            var game = new Game(dto.Name , dto.Genre , dto.Price , dto.ReleaseDate);
             if (game!=null)
             await _context.AddAsync(game);
             throw new InvalidDataException("Invalid");

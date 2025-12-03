@@ -3,7 +3,7 @@ using VideoGameStore.Domain.Entities;
 
 namespace VideoGameStore.Application.Customers.Command.Create
 {
-    public class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand, string>
+    public class CreateCustomerCommandHandler : ICommandHandler<CreateCustomerCommand, int>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IGenericRepository<Customer> _genericRepository;
@@ -13,15 +13,16 @@ namespace VideoGameStore.Application.Customers.Command.Create
             _genericRepository = genericRepository;
               
         }
-        public async Task<string> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
             var customer = new Customer(request.Name, request.Email);
             if (customer != null)
             {
                 await _genericRepository.AddAsync(customer);
-                return customer.Email;
+                await _unitOfWork.CompleteAsync();
+                return customer.Id;
             }
-            return "Invalid Customer";
+            return new ();
 
         }
     }

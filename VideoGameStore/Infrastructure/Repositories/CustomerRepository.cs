@@ -34,7 +34,7 @@ namespace VideoGameStore.Infrastructure.Repositories
 
         public async Task<Customer> GetByIdAsync(int id)
         {
-            return await _context.Customers.FindAsync(id);
+            return await _context.Customers.FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public Task UpdateAsync(Customer customer)

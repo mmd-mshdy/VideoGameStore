@@ -39,7 +39,7 @@ builder.Services.AddDbContext<VideoGamesContext>(options =>
 builder.Services.AddMediatR(cfg =>
 {
     // Register MediatR from Application layer
-    cfg.RegisterServicesFromAssembly(typeof(AssemblyReference).Assembly);
+    cfg.RegisterServicesFromAssembly(typeof(VideoGameStore.Application.AssemblyReference).Assembly);
 });
 
 // Controllers (API)

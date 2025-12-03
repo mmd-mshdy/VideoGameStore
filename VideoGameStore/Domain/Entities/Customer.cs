@@ -1,5 +1,6 @@
 ﻿using Microsoft.CodeAnalysis.Operations;
 using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.Enums;
 
 namespace VideoGameStore.Domain.Entities
 {
@@ -34,19 +35,23 @@ namespace VideoGameStore.Domain.Entities
                 throw new InvalidOperationException("Insufficient Balance");
             WalletBalance -= amount;
         }
-        public void PurchaseGame(Game game)
+        public Transaction PurchaseGame(Game game)
         {
             if (!game.IsAvailable)
                 throw new InvalidOperationException("Game not available");
             DeductBalance(game.Price);
-            Transactions.Add(new Transaction(game,this,game.Price,Enums.TransactionType.Purchase));
+            var purchase = new Transaction(game, this, game.Price, TransactionType.Purchase);
+            Transactions.Add(purchase);
+            return purchase;
         }
-        public void RentGame(Game game, decimal rentprice)
+        public Transaction RentGame(Game game, decimal rentprice)
         {
             if (!game.IsAvailable)
                 throw new InvalidOperationException("Game not available");
             DeductBalance(rentprice);
-            Transactions.Add(new Transaction(game, this, rentprice, Enums.TransactionType.Purchase));
+            var rental = new Transaction(game, this, rentprice, TransactionType.Rent);
+            Transactions.Add(rental);
+            return rental;
         }
     }
 }
