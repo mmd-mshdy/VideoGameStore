@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\transactions\\command\\rental\\rentalgamecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\transactions\\command\\rental\\rentalgamecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\application\\transactions\\command\\rental\\rentalgamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\application\\transactions\\command\\rental\\rentalgamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\tresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\tresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\errors\\customererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\errors\\customererrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\errors\\gameerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\errors\\gameerrors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|c:\\users\\taranom\\source\\repos\\videogamestore\\videogamestore\\domain\\common\\errors\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07A78E5D-F30A-43B7-890B-53AFEEFED9A4}|VideoGameStore\\VideoGameStore.csproj|solutionrelative:videogamestore\\domain\\common\\errors\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,32 +43,101 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RentalGameCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommandHandler.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommandHandler.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommandHandler.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Game.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Game.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:40:02.553Z",
+              "WhenOpened": "2025-12-09T10:00:48.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RentalGameCommand.cs",
-              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommand.cs",
-              "RelativeDocumentMoniker": "VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommand.cs",
-              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommand.cs",
-              "RelativeToolTip": "VideoGameStore\\Application\\Transactions\\Command\\Rental\\RentalGameCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\Entities\\Customer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T10:38:11.272Z",
+              "WhenOpened": "2025-12-09T09:27:56.987Z",
               "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerErrors.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\CustomerErrors.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\Errors\\CustomerErrors.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\CustomerErrors.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\Errors\\CustomerErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T09:27:26.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameErrors.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\GameErrors.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\Errors\\GameErrors.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\GameErrors.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\Errors\\GameErrors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T09:08:40.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TResult.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\TResult.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\TResult.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\TResult.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\TResult.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T08:15:32.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\Error.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\Errors\\Error.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Errors\\Error.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\Errors\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T07:56:35.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Result.cs",
+              "RelativeDocumentMoniker": "VideoGameStore\\Domain\\common\\Result.cs",
+              "ToolTip": "C:\\Users\\taranom\\source\\repos\\VideoGameStore\\VideoGameStore\\Domain\\common\\Result.cs",
+              "RelativeToolTip": "VideoGameStore\\Domain\\common\\Result.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T07:43:34.417Z",
+              "EditorCaption": ""
             }
           ]
         }

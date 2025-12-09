@@ -1,6 +1,7 @@
-﻿using Microsoft.CodeAnalysis.Operations;
-using VideoGameStore.Domain.common;
+﻿using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.Abstractions;
 using VideoGameStore.Domain.Enums;
+using VideoGameStore.Domain.common.Errors;
 
 namespace VideoGameStore.Domain.Entities
 {
@@ -17,11 +18,12 @@ namespace VideoGameStore.Domain.Entities
             Email = email;
             WalletBalance = walletbalance;
         }
-        public void AddBalance (decimal amount)
+        public Result AddBalance (decimal amount)
         {
             if (amount <= 0)
-                throw new InvalidOperationException("Amount should be positive");
+                return Result.Failure(CustomerErrors.InvalidAmountToAdd);
             WalletBalance += amount;
+            return Result.Success();
         }
         public void Update(string name , string email , decimal walletBallance=0)
         {
@@ -29,19 +31,22 @@ namespace VideoGameStore.Domain.Entities
             email = Email;
             walletBallance = WalletBalance;
         }
-        public void DeductBalance(decimal amount)
+        public Result DeductBalance(decimal amount)
         {
             if (amount > WalletBalance)
-                throw new InvalidOperationException("Insufficient Balance");
+                return Result.Failure(CustomerErrors.InsufficientBalance);
             WalletBalance -= amount;
+
+            return Result.Success();
         }
-        public Transaction PurchaseGame(Game game)
+        public Result<Transaction> PurchaseGame(Game game)
         {
             if (!game.IsAvailable)
-                throw new InvalidOperationException("Game not available");
-            DeductBalance(game.Price);
+                return GameErrors.GameUnavailable;
+            var balanceresult = DeductBalance(game.Price);
+            if (balanceresult.IsFailure) return CustomerErrors.InsufficientBalance;
             var purchase = new Transaction(game, this, game.Price, TransactionType.Purchase);
-            Transactions.Add(purchase);
+            Transactions.Add(purchase); 
             return purchase;
         }
         public Transaction RentGame(Game game, decimal rentprice)

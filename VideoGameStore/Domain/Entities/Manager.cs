@@ -1,4 +1,4 @@
-﻿using VideoGameStore.Domain.common;
+﻿using VideoGameStore.Domain.Abstractions;
 
 namespace VideoGameStore.Domain.Entities
 {

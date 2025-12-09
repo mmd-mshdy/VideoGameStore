@@ -1,4 +1,4 @@
-﻿namespace VideoGameStore.Domain.common
+﻿namespace VideoGameStore.Domain.Abstractions
 {
     public interface IAggregateRoot
     {

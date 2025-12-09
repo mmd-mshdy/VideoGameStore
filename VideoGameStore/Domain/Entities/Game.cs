@@ -1,4 +1,6 @@
-﻿using VideoGameStore.Domain.common;
+﻿using VideoGameStore.Domain.Abstractions;
+using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.common.Errors;
 namespace VideoGameStore.Domain.Entities
 {
     public class Game : BaseEntity , IAggregateRoot
@@ -25,14 +27,14 @@ namespace VideoGameStore.Domain.Entities
             ReleaseDate = releaseDate;
         }
 
-        public void UpdatePrice(decimal newprice)
+        public Result UpdatePrice(decimal newprice)
         {
             if (newprice <= 0)
             {
-                throw new InvalidOperationException("Price must be above 0 ");
+                return Result.Failure(GameErrors.InValidPrice);
             }
             Price = newprice;
-
+            return Result.Success();
         }
         public void MarkAsUnavailable() => IsAvailable = false;
         public void MarkAsAvailable() => IsAvailable = true;
