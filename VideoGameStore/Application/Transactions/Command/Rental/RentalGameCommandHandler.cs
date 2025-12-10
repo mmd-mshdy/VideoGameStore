@@ -1,8 +1,10 @@
 ﻿using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.common.Errors;
 using VideoGameStore.Domain.Entities;
 namespace VideoGameStore.Application.Transactions.Command.Rental
 {
-    public class RentalGameCommandHandler : ICommandHandler<RentalGameCommand, string>
+    public class RentalGameCommandHandler : ICommandHandler<RentalGameCommand, Result<Transaction>>
     {
         private readonly IGenericRepository<Transaction> _transactionRepository;
         private readonly IGenericRepository<Customer> _customerRepository;
@@ -19,27 +21,21 @@ namespace VideoGameStore.Application.Transactions.Command.Rental
             _unitOfWork = unitOfWork;
 
         }
-        public async Task<string> Handle(RentalGameCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Transaction>> Handle(RentalGameCommand request, CancellationToken cancellationToken)
         {
             var customer = await _customerRepository.GetByIdAsync(request.customerId);
-            if (customer == null) return "Customer Not Found ";
             var game= await _gameRepository.GetByIdAsync(request.gameId);
-            if (customer == null) return "Customer Not Found ";
             try
             {
                 var rental = customer.RentGame(game, request.rentPrice);
                 await _transactionRepository.AddAsync(rental);
                 await _unitOfWork.CompleteAsync();
+                return Result.Success(rental);
             }
-            catch(InvalidOperationException ex)
+            catch
             {
-                return ex.Message;
+                return Result.Failure<Transaction>(TransactionErrors.TransactionFailed);
             }
-            catch(Exception ex)
-            {
-                return ex.Message;
-            }
-            return "Rented";
         }
     }
 }

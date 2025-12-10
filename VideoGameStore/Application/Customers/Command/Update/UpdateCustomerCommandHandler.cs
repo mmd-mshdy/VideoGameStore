@@ -1,9 +1,11 @@
 ﻿using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.common.Errors;
 using VideoGameStore.Domain.Entities;
 
 namespace VideoGameStore.Application.Customers.Command.Update
 {
-    public class UpdateCustomerCommandHandler : ICommandHandler<UpdateCustomerCommand, int>
+    public class UpdateCustomerCommandHandler : ICommandHandler<UpdateCustomerCommand, Result<Customer>>
     {
         private readonly IGenericRepository<Customer> _repository;
         private readonly IUnitOfWork _unitOfWork;
@@ -13,7 +15,7 @@ namespace VideoGameStore.Application.Customers.Command.Update
             _unitOfWork = unitOfWork;
                 
         }
-        public async Task<int> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Customer>> Handle(UpdateCustomerCommand request, CancellationToken cancellationToken)
         {
             var customer = await _repository.GetByIdAsync(request.Id);
             if (customer != null)
@@ -21,9 +23,9 @@ namespace VideoGameStore.Application.Customers.Command.Update
                 customer.Update(request.Name, request.Email);
                 await _repository.UpdateAsync(customer);
                 await _unitOfWork.CompleteAsync();
-                return customer.Id;
+                return Result.Success(customer) ;
             }
-            return request.Id;
+            return Result.Failure<Customer>(CustomerErrors.FailedToFetchCustomer);
         }
     }
 }

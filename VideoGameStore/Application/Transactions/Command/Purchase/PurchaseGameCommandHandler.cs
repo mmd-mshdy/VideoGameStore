@@ -1,8 +1,10 @@
 ﻿using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.common;
+using VideoGameStore.Domain.common.Errors;
 using VideoGameStore.Domain.Entities;
 namespace VideoGameStore.Application.Transactions.Command.Purchase
 {
-    public class PurchaseGameCommandHandler : ICommandHandler<PurchaseGameCommand, string>
+    public class PurchaseGameCommandHandler : ICommandHandler<PurchaseGameCommand, Result<Transaction>>
     {
         private readonly IGenericRepository<Game> _gamesRepository;
         private readonly IGenericRepository<Customer> _customerRepository ;
@@ -19,28 +21,21 @@ namespace VideoGameStore.Application.Transactions.Command.Purchase
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<string> Handle(PurchaseGameCommand request, CancellationToken cancellationToken)
+        public async Task<Result<Transaction>> Handle(PurchaseGameCommand request, CancellationToken cancellationToken)
         {
             var game = await _gamesRepository.GetByIdAsync(request.gameId);
-            if (game == null) return "Game not found";
             var customer = await _customerRepository.GetByIdAsync(request.customerId);
-            if (customer == null) return "csustomer not found";
-
             try
             {
             var transaction =  customer.PurchaseGame(game);
             await _transactionRepository.AddAsync(transaction);
             await _unitOfWork.CompleteAsync();
+                return Result.Success(transaction);
             }
-            catch(InvalidOperationException ex)
+            catch
             {
-                return ex.Message;
+                return Result.Failure<Transaction>(TransactionErrors.TransactionFailed);
             }
-            catch(Exception ex)
-            {
-                return $"{ex.Message}";
-            }
-            return "Purchased";
         }
     }
 }
