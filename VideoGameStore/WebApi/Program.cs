@@ -1,15 +1,18 @@
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Hybrid; // <-- needed to locate assembly
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
+using System.Reflection.Metadata;
+using VideoGameStore.Application.Games.Command.Create;
+using VideoGameStore.Application.Interfaces;
+using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
 using VideoGameStore.Infrastructure.Repositories;
-using VideoGameStore.Domain.Entities;
-using VideoGameStore.Application.Interfaces;
-using VideoGameStore.Application.Games.Command.Create;
-using System.Reflection.Metadata;
-using Microsoft.Extensions.Caching.Hybrid; // <-- needed to locate assembly
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +31,29 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero
         };
     });
+//OpenTelemtry
+builder.Logging.AddOpenTelemetry(logging =>
+{
+    logging.IncludeFormattedMessage = true;
+    logging.IncludeScopes = true;
+});
 
+
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(r => r.AddService("Learning.EfCore.Api"))
+    .WithMetrics(metrics =>
+    {
+        metrics
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation();
+    })
+    .WithTracing(tracing =>
+    {
+        tracing
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation()
+            .AddEntityFrameworkCoreInstrumentation();
+    });
 //Cache
 builder.Services.AddMemoryCache();
 builder.Services.AddDistributedMemoryCache();
