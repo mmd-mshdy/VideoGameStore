@@ -49,7 +49,15 @@ builder.Services.AddHybridCache(options =>
         LocalCacheExpiration = TimeSpan.FromMinutes(30)
     };
 });
-
+//HealthChecks
+builder.Services.AddHealthChecks()
+    .AddRedis(builder.Configuration["Redis"] ?? "")
+    .AddSeqPublisher(x =>
+    {
+        x.Endpoint = "http://localhost:5341/ingest/otlp/v1/logs";
+        x.ApiKey = "0CAjh2Hl6Py1UXqVhL1o";
+        x.DefaultInputLevel = HealthChecks.Publisher.Seq.SeqInputLevel.Information;
+    });
 // Authorization
 builder.Services.AddAuthorization();
 

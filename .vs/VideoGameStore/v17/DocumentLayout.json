@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "VideoGameStore\\WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Notebook\\Desktop\\VideoGameStore\\VideoGameStore\\WebApi\\Program.cs",
               "RelativeToolTip": "VideoGameStore\\WebApi\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAQwCIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwDYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-26T20:06:41.441Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "VideoGameStore\\Application\\Games\\Command\\Create\\CreateGameCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-10T06:14:22.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-10T06:14:22.451Z"
             }
           ]
         }
