@@ -8,7 +8,8 @@ using VideoGameStore.Infrastructure.Repositories;
 using VideoGameStore.Domain.Entities;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Application.Games.Command.Create;
-using System.Reflection.Metadata; // <-- needed to locate assembly
+using System.Reflection.Metadata;
+using Microsoft.Extensions.Caching.Hybrid; // <-- needed to locate assembly
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,27 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ClockSkew = TimeSpan.Zero
         };
     });
+
+//Cache
+builder.Services.AddMemoryCache();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddStackExchangeRedisCache(config =>
+{
+    config.Configuration = builder.Configuration["Redis"];
+});
+builder.Services.AddHybridCache(options =>
+{
+    // Maximum size of cached items
+    options.MaximumPayloadBytes = 1024 * 1024 * 10; // 10MB
+    options.MaximumKeyLength = 512;
+
+    // Default timeouts
+    options.DefaultEntryOptions = new HybridCacheEntryOptions
+    {
+        Expiration = TimeSpan.FromMinutes(30),
+        LocalCacheExpiration = TimeSpan.FromMinutes(30)
+    };
+});
 
 // Authorization
 builder.Services.AddAuthorization();
