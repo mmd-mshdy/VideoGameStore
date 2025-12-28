@@ -2,8 +2,6 @@
 using FluentValidation;
 using VideoGameStore.Domain.common;
 using VideoGameStore.Domain.common.Errors;
-using FluentValidation.Results;
-
 namespace VideoGameStore.Application.Behaviors
 {
     public class ValidationPipeLineBehavior<TRequest , TResponse> : IPipelineBehavior<TRequest, TResponse>

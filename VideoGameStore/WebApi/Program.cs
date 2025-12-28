@@ -13,7 +13,8 @@ using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
 using VideoGameStore.Infrastructure.Data;
 using VideoGameStore.Infrastructure.Repositories;
-
+using FluentValidation;
+using VideoGameStore.Application.Behaviors;
 var builder = WebApplication.CreateBuilder(args);
 
 // Authentication
@@ -96,6 +97,10 @@ builder.Services.AddMediatR(cfg =>
     // Register MediatR from Application layer
     cfg.RegisterServicesFromAssembly(typeof(VideoGameStore.Application.AssemblyReference).Assembly);
 });
+// Validation Injection
+builder.Services.AddValidatorsFromAssembly(
+    typeof(VideoGameStore.Application.AssemblyReference).Assembly);
+
 
 // Controllers (API)
 builder.Services.AddControllers();
@@ -112,7 +117,10 @@ builder.Services.AddScoped<IGenericRepository<Game>, GameRepository>();
 builder.Services.AddScoped<IGenericRepository<Customer>, CustomerRepository>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+builder.Services.AddTransient(
+    typeof(IPipelineBehavior<,>),
+    typeof(ValidationPipeLineBehavior<,>)
+);
 
 
 var app = builder.Build();
