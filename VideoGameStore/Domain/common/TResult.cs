@@ -11,7 +11,7 @@ namespace VideoGameStore.Domain.common
             _value = value;
         }
         public static implicit operator Result<T>(T value)
-        => Success(value);
+        => Create(value);
         public static implicit operator Result<T>(Error error)
          => Failure<T>(error);
         public T Value => IsSuccess ? _value! : throw new InvalidOperationException("Value not accessible");

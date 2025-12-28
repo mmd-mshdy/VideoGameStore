@@ -7,7 +7,7 @@ namespace VideoGameStore.Domain.common
         public bool IsSuccess {get;}
         public bool IsFailure => !IsSuccess;
         public Error? Error {get;}
-        public Result(bool isSuccess , Error error)
+        protected internal Result(bool isSuccess , Error error)
         {
             if (isSuccess == true && error != null ||
                 isSuccess == false && error == Error.None || 
@@ -31,6 +31,7 @@ namespace VideoGameStore.Domain.common
                 throw new InvalidOperationException("unknown problem occured");
             return new(default!, false, error);
         }
+        public static Result<T> Create<T>(T value) => value is not null ? Success(value) : Failure<T>(Error.None);
 
     }
 }
