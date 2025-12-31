@@ -33,6 +33,7 @@ namespace VideoGameStore.Application.Behaviors
                 .ToArray();
             if (errors.Any())
             {
+                return CreateValidationResult<TResponse>(errors);
 
             }
             return await next();

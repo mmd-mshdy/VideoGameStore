@@ -117,7 +117,7 @@ builder.Services.AddScoped<IGenericRepository<Game>, GameRepository>();
 builder.Services.AddScoped<IGenericRepository<Customer>, CustomerRepository>();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddTransient(
+builder.Services.AddScoped(
     typeof(IPipelineBehavior<,>),
     typeof(ValidationPipeLineBehavior<,>)
 );
