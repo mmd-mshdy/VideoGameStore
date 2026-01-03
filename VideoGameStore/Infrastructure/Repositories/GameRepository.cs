@@ -31,6 +31,12 @@ namespace VideoGameStore.Infrastructure.Repositories
             {
                 _context.Games.Remove(game);
             }
+
         }
+        public async Task<IEnumerable<Game>> GetAvailableGamesAsync()
+    => await _context.Games
+        .Where(g => g.IsAvailable)
+        .Include(g => g.Inventory)
+        .ToListAsync();
     }
 }

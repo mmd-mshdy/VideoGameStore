@@ -42,5 +42,11 @@ namespace VideoGameStore.Infrastructure.Repositories
             _context.Customers.Update(customer);
             return Task.CompletedTask;
         }
+
+        public async Task<Customer?> GetWithTransactionsAsync(int id)
+            => await _context.Customers
+                .Include(c => c.Transactions)
+                .Include(c => c.Rentals)
+                .FirstOrDefaultAsync(c => c.Id == id);
     }
 }
