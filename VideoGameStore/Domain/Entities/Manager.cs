@@ -1,4 +1,5 @@
 ﻿using VideoGameStore.Domain.Abstractions;
+using VideoGameStore.Domain.ValueObjects;
 
 namespace VideoGameStore.Domain.Entities
 {
@@ -14,12 +15,12 @@ namespace VideoGameStore.Domain.Entities
             Email = email;
         }
 
-        public Game AddGame(string name, string genre, decimal price, DateTime releaseDate)
+        public Game AddGame(string name, string genre, Money price, DateTime releaseDate)
         {
             return new Game(name, genre, price, releaseDate);
         }
 
-        public void UpdateGamePrice(Game game, decimal newPrice)
+        public void UpdateGamePrice(Game game, Money newPrice)
         {
             game.UpdatePrice(newPrice);
         }

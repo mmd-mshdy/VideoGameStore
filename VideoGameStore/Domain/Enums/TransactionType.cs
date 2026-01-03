@@ -3,6 +3,6 @@
     public enum TransactionType
     {
         Purchase = 1 ,
-        Rent=2
+        Rental=2
     }
 }
