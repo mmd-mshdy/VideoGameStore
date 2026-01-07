@@ -1,6 +1,7 @@
 ﻿using VideoGameStore.Domain.common;
 using VideoGameStore.Domain.Enums;
 using VideoGameStore.Domain.Abstractions;
+using VideoGameStore.Domain.ValueObjects;
 namespace VideoGameStore.Domain.Entities
 {
     public class Rental : BaseEntity
@@ -32,13 +33,20 @@ namespace VideoGameStore.Domain.Entities
             return Result.Success(result);
         }
 
-        public Result ReturnGame(DateTime now)
+        public Result<Money> Return(DateTime returnedAt)
         {
             if (ReturnedAt is not null)
-                return Result.Failure(new("Rental.IsReturned","Already Returned"));
-            Status = RentalStatus.Returned;
-            ReturnedAt = now;
-            return Result.Success();
+                return Result.Failure<Money>(new ("Rental.AlreadyReturned","Rentals HAve already been returned"));
+
+            ReturnedAt = returnedAt;
+
+            if (returnedAt <= DueDate)
+                return Result.Success(Money.Zero);
+
+            var lateDays = (returnedAt.Date - DueDate.Date).Days;
+            var lateFee = new Money(lateDays * 2); // $2 per late day
+
+            return Result.Success(lateFee);
         }
     }
 

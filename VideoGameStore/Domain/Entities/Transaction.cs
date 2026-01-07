@@ -11,6 +11,7 @@ public class Transaction : BaseEntity
     public int GameId { get; private set; }
     public Money Amount { get; private set; }
     public TransactionType TransactionType { get; private set; }
+    public DateTime OccuredAt {  get; private set; }
 
     protected Transaction() { }
 
@@ -20,11 +21,14 @@ public class Transaction : BaseEntity
         GameId = gameId;
         Amount = amount;
         TransactionType = type;
+        OccuredAt = DateTime.UtcNow;
     }
 
     public static Transaction CreatePurchase(int customerId, int gameId, Money amount)
-        => new(customerId, gameId, amount, TransactionType.Purchase);
+        => new(customerId, gameId, amount, TransactionType.Purchase );
 
     public static Transaction CreateRental(int customerId, int gameId, Money amount)
         => new(customerId, gameId, amount, TransactionType.Rental);
+    public static Transaction LateFee(int customerId, int gameId, Money amount)
+        => new(customerId, gameId, amount,TransactionType.LateFee);
 }
