@@ -15,6 +15,9 @@ using VideoGameStore.Infrastructure.Data;
 using VideoGameStore.Infrastructure.Repositories;
 using FluentValidation;
 using VideoGameStore.Application.Behaviors;
+using Microsoft.AspNetCore.Identity;
+using System.Text;
+using VideoGameStore.Infrastructure.Identity;
 var builder = WebApplication.CreateBuilder(args);
 
 // Authentication
@@ -85,6 +88,25 @@ builder.Services.AddHealthChecks()
         x.DefaultInputLevel = HealthChecks.Publisher.Seq.SeqInputLevel.Information;
     });
 // Authorization
+builder.Services.AddIdentity<ApplicationUser, IdentityRole<int>>()
+    .AddEntityFrameworkStores<VideoGamesContext>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "Jwt:Issuer",
+            ValidAudience = "Jwt:Audience",
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes("Jwt:Key"))
+        };
+    });
+
 builder.Services.AddAuthorization();
 
 // DB

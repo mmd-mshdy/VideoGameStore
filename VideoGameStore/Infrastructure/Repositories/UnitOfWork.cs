@@ -2,6 +2,7 @@
 using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
+using VideoGameStore.Domain.ValueObjects;
 using VideoGameStore.Infrastructure.Data;
 
 namespace VideoGameStore.Infrastructure.Repositories
@@ -21,7 +22,8 @@ namespace VideoGameStore.Infrastructure.Repositories
         }
         public async Task AddGames(UpdateGameCommand dto)
         {
-            var game = new Game(dto.Name , dto.Genre , dto.Price , dto.ReleaseDate);
+            var price = new Money(dto.Price);
+            var game = new Game(dto.Name , dto.Genre , price , dto.ReleaseDate);
             if (game!=null)
             await _context.AddAsync(game);
             throw new InvalidDataException("Invalid");

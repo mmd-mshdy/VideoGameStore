@@ -28,7 +28,7 @@ namespace VideoGameStore.Domain.Entities
             Membership = membership;
         }
 
-        public Result<Rental> RentGame(Game game, Money rentPrice)
+        public Result<Rental> RentGame(Game game, Money rentPrice , int days)
         {
             if (!Membership.CanRent(_rentals.Count(r => r.Status == RentalStatus.Active)))
                 return Result.Failure<Rental>(RentalErrors.LimitExceeded);
@@ -36,7 +36,7 @@ namespace VideoGameStore.Domain.Entities
             WalletBalance = WalletBalance.Subtract(rentPrice);
             game.ReserveStock(1);
 
-            var rental = new Rental(game.Id, Id);
+            var rental = new Rental(game.Id, Id ,days);
             _rentals.Add(rental);
 
             _transactions.Add(Transaction.CreateRental(Id, game.Id, rentPrice));

@@ -7,6 +7,7 @@ using VideoGameStore.Application.Games.Command.Update;
 using VideoGameStore.Application.Games.Query.Get;
 using VideoGameStore.Application.Games.Query.GetAll;
 
+[Authorize]
 public sealed class GamesController : ApiController
 {
     private readonly IMediator _mediator;

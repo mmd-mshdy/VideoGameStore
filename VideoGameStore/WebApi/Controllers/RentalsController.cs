@@ -1,8 +1,11 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using VideoGameStore.Application.Transactions.Command.Rental;
 using VideoGameStore.Application.Transactions.Command.Rentals;
+using VideoGameStore.Domain.Authorization;
 
+[Authorize (Roles=Roles.Customer)]
 public sealed class RentalsController : ApiController
 {
     private readonly IMediator _mediator;

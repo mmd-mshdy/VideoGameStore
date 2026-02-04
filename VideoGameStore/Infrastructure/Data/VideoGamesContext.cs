@@ -1,10 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using VideoGameStore.Application.Interfaces;
 using VideoGameStore.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using VideoGameStore.Infrastructure.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace VideoGameStore.Infrastructure.Data
 {
-    public class VideoGamesContext : DbContext , IUnitOfWork
+    public class VideoGamesContext : IdentityDbContext<ApplicationUser, IdentityRole<int>, int>,
+        IUnitOfWork 
     {
         public VideoGamesContext(DbContextOptions<VideoGamesContext> options) : base(options) { }
         public DbSet<Game>? Games { get; set; } = null;
